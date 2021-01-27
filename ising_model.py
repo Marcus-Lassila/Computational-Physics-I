@@ -135,9 +135,6 @@ class IsingModel(object):
             # Note that we have multiplied the J-term by a factor of two to account for both 
             # the interaction of the spin at i,j with its neighbours and the interaction of the neighbours
             # with the spin at i,j.
-            # e = - B*self.S[i,j] - J*self.S[i,j]*sum([self.S[k,l] for k,l in self.neighbours(i,j)])
-            # enew = + B*self.S[i,j] + J*self.S[i,j]*sum([self.S[k,l] for k,l in self.neighbours(i,j)])
-            # de = enew - e
 
             de = 2*B*self.S[i,j] + 2*J*self.S[i,j]*sum([self.S[k,l] for k,l in self.neighbours(i,j)])
 
