@@ -172,7 +172,7 @@ def main():
 
     total_time = 0.0
     for height, t_max, theta_min, theta_max in parameters:
-        res, rt = find_optimal_throws(initial_speed, height, m, time_range=(0, t_max, t_max*10), theta_range=(theta_min, theta_max, 20), quadratic=True, running_time=True)
+        res, rt = find_optimal_throws(initial_speed, height, m, time_range=(0, t_max, t_max*1000), theta_range=(theta_min, theta_max, 2000), quadratic=True, running_time=True)
         data.append(res)
         description.append("initial height: " + str(height) + " meters")
         if rt < 60.0:
